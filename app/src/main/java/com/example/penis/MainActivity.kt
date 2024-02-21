@@ -63,7 +63,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Нечего сбрасывать", Toast.LENGTH_SHORT).show()
             }
 
-
         }
 
     }
