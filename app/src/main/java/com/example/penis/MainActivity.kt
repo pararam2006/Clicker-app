@@ -1,6 +1,7 @@
 package com.example.penis
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.widget.Button
@@ -18,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val df: SimpleDateFormat = SimpleDateFormat("EEE, d MMM yyyy, HH:mm")
+        val df = SimpleDateFormat("EEE, d MMM yyyy, HH:mm")
         var counter: Int = 0
         var lastCounter: Int = 0
 
+        //В кнопках можно использовать onTouchListener
         //Кнопка плюса
         binding.buttonPlus.setOnClickListener {
             ++counter
@@ -62,6 +64,11 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Нечего сбрасывать", Toast.LENGTH_SHORT).show()
             }
 
+        }
+
+        binding.buttonNext.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
 
     }
