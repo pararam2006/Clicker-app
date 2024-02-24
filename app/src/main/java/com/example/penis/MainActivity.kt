@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "$counter нажатий! Так держать!", Toast.LENGTH_SHORT).show()
                     lastCounter += 20
                     if (counter == 100) {
-                        Toast.makeText(this, "$counter нажатий! Так держать!", Toast.LENGTH_SHORT).show()
                         Toast.makeText(this, "А теперь иди и поиграй во что-то нормальное ;)", Toast.LENGTH_LONG).show()
                     }
                 }
@@ -62,7 +61,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Нечего сбрасывать", Toast.LENGTH_SHORT).show()
             }
-
 
         }
 
