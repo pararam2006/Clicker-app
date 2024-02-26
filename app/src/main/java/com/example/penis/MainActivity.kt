@@ -1,5 +1,6 @@
 package com.example.penis
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.icu.text.SimpleDateFormat
@@ -75,18 +76,19 @@ class MainActivity : AppCompatActivity() {
     }
 
         //TODO: "Сделать сохранение данных с помощью onSaveInstanceState и onRestoreInstanceState (или как-то по-другому)"
-/*     override fun onSaveInstanceState(outState: Bundle) {
+     override fun onSaveInstanceState(outState: Bundle) {
          outState.run {
             putInt("KEY", counter.toInt())
 
          }
 
          super.onSaveInstanceState(outState)
-     }*/
-/*     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+     }
+     @SuppressLint("SetTextI18n")
+     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-
-        binding.counterView.text = "Кол-во нажатий: ${savedInstanceState.getInt("KEY")}"
-     }*/
+        var counter = savedInstanceState.getInt("KEY")
+        binding.counterView.text = "Кол-во нажатий: $counter"
+     }
 
 }
