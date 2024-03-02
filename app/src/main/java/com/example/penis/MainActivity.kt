@@ -77,15 +77,13 @@ class MainActivity : AppCompatActivity() {
                     (binding.buttonPlus.tag as? Timer)?.cancel()
                     when(counter) {
                         lastCounter + 25 -> {
-                            Toast.makeText(this, "$counter нажатий! Так держать!", Toast.LENGTH_SHORT).show()
-                            lastCounter += 25
                             if (counter == 100) {
                                 Toast.makeText(this, "А теперь иди и поиграй во что-то нормальное ;)", Toast.LENGTH_LONG).show()
                             }
+                            Toast.makeText(this, "$counter нажатий! Так держать!", Toast.LENGTH_SHORT).show()
+                            lastCounter += 25
                         }
-
                         1 -> Toast.makeText(this, "На 100 нажатий будет сюрприз ;D", Toast.LENGTH_LONG).show()
-
                     }
                 }
             }
